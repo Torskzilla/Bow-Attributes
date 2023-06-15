@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+	"minecraft:wither_skull",
+	"minecraft:dragon_fireball",
+	"minecraft:small_fireball",
+	"minecraft:fireball"
+  ]
+}
