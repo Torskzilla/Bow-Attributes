@@ -1,9 +1,9 @@
 #IF YOU UPDATE ANYTHING IN HERE, RUN /function settings:setup
 
 #Scoreboards
+scoreboard objectives add bowGlobal dummy "Global Values"
 scoreboard objectives add bowArrowTicks dummy "Arrow Life Time"
 scoreboard objectives add arrowRange dummy "Range"
-scoreboard objectives add bowGlobal dummy "Global Values"
 scoreboard objectives add compare dummy "UUID Compare"
 scoreboard objectives add bowAiming dummy "Bow Aiming"
 scoreboard objectives add crossbowAiming dummy "Crossbow Aiming"
@@ -12,6 +12,7 @@ scoreboard players set #visual bowGlobal 1
 
 #Constants
 scoreboard players set #-1 bowGlobal -1
+scoreboard players set #100 bowGlobal 100
 
 #Settings, initially set to vanilla values
 
