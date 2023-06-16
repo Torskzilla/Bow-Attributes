@@ -9,6 +9,8 @@ scoreboard players set #mulPierce bowGlobal 100
 scoreboard players set #mulRange bowGlobal 100
 scoreboard players set #mulForce bowGlobal 100
 
+execute store result score #spectral bowGlobal if entity @s[type=minecraft:spectral_arrow]
+
 execute on origin run function bow:origin
 
 #change
@@ -18,12 +20,6 @@ execute if score #mob bowGlobal matches 1 run function bow:get_mob
 execute if score #mob bowGlobal matches 0 on origin run function bow:arrow_stats
 
 execute if score #mob bowGlobal matches 1 run function bow:mob_default
-
-execute if score #spectralDamage bowGlobal matches 1 if entity @s[type=minecraft:spectral_arrow] run function bow:spectral
-
-execute if score #enchPower bowGlobal matches 1.. run scoreboard players add #arrowDamage bowGlobal 5
-scoreboard players operation #arrowDamage bowGlobal += #enchPower bowGlobal
-scoreboard players operation #arrowPierce bowGlobal += #enchPiercing bowGlobal
 
 function bow:arrow_force
 

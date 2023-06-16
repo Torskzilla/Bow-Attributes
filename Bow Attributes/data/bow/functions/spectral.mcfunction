@@ -1,1 +1,1 @@
-scoreboard players add #mulDamage bowGlobal 50
+scoreboard players add #mulDamage bowGlobal 20
