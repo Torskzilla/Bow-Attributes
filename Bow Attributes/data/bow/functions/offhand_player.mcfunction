@@ -6,5 +6,6 @@ execute store result score #arrowForce bowGlobal run data get storage minecraft:
 execute store result score #arrowPierce bowGlobal run data get storage minecraft:player Player.Inventory[{Slot:-106b}].tag.pierce
 execute store result score #enchPower bowGlobal run data get storage minecraft:player Player.Inventory[{Slot:-106b}].tag.Enchantments[{id:"minecraft:power"}].lvl 5
 execute store result score #enchPiercing bowGlobal run data get storage minecraft:player Player.Inventory[{Slot:-106b}].tag.Enchantments[{id:"minecraft:piercing"}].lvl
+execute store result score #flame bowGlobal run data get storage minecraft:player Player.Inventory[{Slot:-106b}].tag.Enchantments[{id:"minecraft:flame"}].lvl
 
 execute if data storage minecraft:player Player.Inventory[{Slot:-106b,tag:{crit:1b}}] run scoreboard players set #crossbowCrit bowGlobal 1

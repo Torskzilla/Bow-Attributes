@@ -2,6 +2,7 @@ scoreboard players set #mob bowGlobal 0
 
 scoreboard players set #arrowCrit bowGlobal 0
 scoreboard players set #crossbowCrit bowGlobal 0
+scoreboard players set #flame bowGlobal 0
 
 scoreboard players set #mulDamage bowGlobal 100
 scoreboard players set #mulPierce bowGlobal 100

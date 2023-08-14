@@ -8,6 +8,7 @@ execute store result score #arrowForce bowGlobal run data get storage minecraft:
 execute store result score #arrowPierce bowGlobal run data get storage minecraft:player Player.HandItems[0].tag.pierce
 #execute store result score #enchPower bowGlobal run data get storage minecraft:player Player.HandItems[0].tag.Enchantments[{id:"minecraft:power"}].lvl 5
 execute store result score #enchPiercing bowGlobal run data get storage minecraft:player Player.HandItems[0].tag.Enchantments[{id:"minecraft:piercing"}].lvl
+execute store result score #flame bowGlobal run data get storage minecraft:player Player.HandItems[0].tag.Enchantments[{id:"minecraft:flame"}].lvl
 
 data modify storage minecraft:mainhand Hand set from storage minecraft:player Player.HandItems[0]
 

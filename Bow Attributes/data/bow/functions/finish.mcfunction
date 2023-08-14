@@ -3,5 +3,6 @@ execute unless score #arrowForce bowGlobal matches 100 run data modify entity @s
 execute store result entity @s damage double 0.1 run scoreboard players get #arrowDamage bowGlobal
 execute store result entity @s PierceLevel byte 1 run scoreboard players get #arrowPierce bowGlobal
 execute store result entity @s crit byte 1 run scoreboard players get #arrowCrit bowGlobal
+execute if score #flame bowGlobal matches 1.. run data modify entity @s Fire set value 2000s
 
 function hook:projectile
