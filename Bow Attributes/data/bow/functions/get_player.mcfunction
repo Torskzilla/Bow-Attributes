@@ -10,6 +10,6 @@ execute store result score #enchPower bowGlobal run data get storage minecraft:p
 execute store result score #enchPiercing bowGlobal run data get storage minecraft:player Player.SelectedItem.tag.Enchantments[{id:"minecraft:piercing"}].lvl
 execute store result score #flame bowGlobal run data get storage minecraft:player Player.SelectedItem.tag.Enchantments[{id:"minecraft:flame"}].lvl
 
-execute if data storage minecraft:player Player.SelectedItem{id:"minecraft:crossbow"} if data storage minecraft:player Player.SelectedItem{tag:{crit:1b}} run scoreboard players set #crossbowCrit bowGlobal 1
+execute if data storage minecraft:player Player.SelectedItem{id:"minecraft:crossbow"} if data storage minecraft:player Player.SelectedItem{tag:{crit:1b}} run function bow:crossbow_crit_main
 
 execute unless data storage minecraft:player Player.SelectedItem{id:"minecraft:bow"} unless data storage minecraft:player Player.SelectedItem{id:"minecraft:crossbow"} run function bow:offhand_player

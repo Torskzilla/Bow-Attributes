@@ -1,2 +1,2 @@
-execute if data storage minecraft:player Player.SelectedItem{id:"minecraft:crossbow"} run function bow:crossbow_charge2
-execute unless data storage minecraft:player Player.SelectedItem{id:"minecraft:crossbow"} run function bow:off_crossbow_charge
+execute if predicate bow:crossbow_main run function bow:crossbow_charge2
+execute if predicate bow:crossbow_off run function bow:off_crossbow_charge

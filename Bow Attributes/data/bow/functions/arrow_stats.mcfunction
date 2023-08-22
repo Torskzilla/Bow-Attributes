@@ -3,6 +3,7 @@ execute if score #arrowForce bowGlobal matches 0 run scoreboard players operatio
 execute if score #arrowRange bowGlobal matches 0 run scoreboard players operation #arrowRange bowGlobal = #defaultRange bowGlobal
 execute if score #arrowPierce bowGlobal matches 0 run scoreboard players operation #arrowPierce bowGlobal = #defaultPierce bowGlobal
 
+#bow shows as fully charged on 17 but does not deal full damage yet
 execute at @s[scores={bowAiming=18..23}] run function bow:bow_crit
 execute if score #crossbowCrit bowGlobal matches 1 run function bow:crossbow_crit
 

@@ -8,4 +8,4 @@ execute store result score #enchPower bowGlobal run data get storage minecraft:p
 execute store result score #enchPiercing bowGlobal run data get storage minecraft:player Player.Inventory[{Slot:-106b}].tag.Enchantments[{id:"minecraft:piercing"}].lvl
 execute store result score #flame bowGlobal run data get storage minecraft:player Player.Inventory[{Slot:-106b}].tag.Enchantments[{id:"minecraft:flame"}].lvl
 
-execute if data storage minecraft:player Player.Inventory[{Slot:-106b,tag:{crit:1b}}] run scoreboard players set #crossbowCrit bowGlobal 1
+execute if data storage minecraft:player Player.Inventory[{Slot:-106b,tag:{crit:1b}}] run function bow:crossbow_crit_off
