@@ -3,7 +3,9 @@ scoreboard players add @s[tag=bowAiming] bowAiming 1
 
 scoreboard players set @s[tag=!crossbowAiming] crossbowAiming 0
 
-tag @s[tag=!crossbowAiming] remove offhandCharging
+execute if score @s bowAiming matches 1 unless predicate bow:bow_main run tag @s add offhandAiming
+execute if score @s crossbowAiming matches 1 unless predicate bow:crossbow_main run tag @s add offhandAiming
+
 tag @s[tag=!crossbowAiming] remove critActivated
 
 execute as @s[tag=crossbowAiming,tag=!critActivated] unless predicate bow:firework_off unless predicate bow:firework_main run function bow:crossbow_charge

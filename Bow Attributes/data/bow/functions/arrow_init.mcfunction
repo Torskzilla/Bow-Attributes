@@ -15,7 +15,7 @@ execute store result score #spectral bowGlobal if entity @s[type=minecraft:spect
 execute on origin run function bow:origin
 
 #change
-execute if score #mob bowGlobal matches 0 run function bow:get_player
+execute if score #mob bowGlobal matches 0 on origin run function bow:get_player
 execute if score #mob bowGlobal matches 1 run function bow:get_mob
 
 execute if score #mob bowGlobal matches 0 on origin run function bow:arrow_stats
