@@ -12,6 +12,6 @@
     }
   },
   "rewards": {
-    "function": "bow:using_bow"
+    "function": "bow:player/using_bow"
   }
 }

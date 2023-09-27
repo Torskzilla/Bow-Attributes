@@ -12,6 +12,6 @@
     }
   },
   "rewards": {
-    "function": "bow:using_crossbow"
+    "function": "bow:player/using_crossbow"
   }
 }

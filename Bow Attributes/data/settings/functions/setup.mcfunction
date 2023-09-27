@@ -25,6 +25,9 @@ scoreboard players set #defaultMobRange bowGlobal -1
 scoreboard players set #defaultMobForce bowGlobal 100
 scoreboard players set #defaultMobPierce bowGlobal 0
 
+scoreboard players set #defaultFireworkMobRange bowGlobal -1
+scoreboard players set #defaultFireworkMobForce bowGlobal 100
+
 scoreboard players set #defaultTridentRange bowGlobal -1
 scoreboard players set #defaultTridentForce bowGlobal 100
 
@@ -41,10 +44,10 @@ scoreboard players set #defaultMobThrowRange bowGlobal -1
 scoreboard players set #defaultMobThrowForce bowGlobal 100
 
 #1 = true, 0 = false
-#bows crit by releasing right as they're fully charges, crossbows crit by overcharging
+#bows crit by releasing right as they're fully charged, crossbows crit by overcharging
 scoreboard players set #customCrits bowGlobal 1
 
-#spectral arrows deal extra damage
+#spectral arrows deal X% extra damage, so spectralDamage 20 makes spectral arrows deal 20% more damage
 scoreboard players set #spectralDamage bowGlobal 0
 
 #Create mob list if it doesnt exist
@@ -52,3 +55,5 @@ execute unless data storage minecraft:launch Mobs run data merge storage minecra
 
 #Start id count if it hasnt started
 execute unless score #launchId bowGlobal matches 1.. run scoreboard players set #launchId bowGlobal 1
+
+#IF YOU UPDATE ANYTHING IN HERE, RUN /function settings:setup
