@@ -8,8 +8,8 @@ execute if score @s crossbowAiming matches 1 unless predicate bow:crossbow_main 
 
 tag @s[tag=!crossbowAiming] remove critActivated
 
-execute as @s[tag=crossbowAiming,tag=!critActivated] unless predicate bow:firework_off unless predicate bow:firework_main run function bow:crossbow_charge
+execute if score #customCrits bowGlobal matches 1 as @s[tag=crossbowAiming,tag=!critActivated] unless predicate bow:firework_off unless predicate bow:firework_main run function bow:crossbow_charge
 
-execute as @s[scores={bowAiming=18}] run playsound minecraft:item.crossbow.quick_charge_3 player @s ~ ~ ~ 1 1 0
+execute if score #customCrits bowGlobal matches 1 as @s[scores={bowAiming=18}] run playsound minecraft:item.crossbow.quick_charge_3 player @s ~ ~ ~ 1 1 0
 
 scoreboard players set @s[scores={crossbowAiming=135..}] crossbowAiming 0
