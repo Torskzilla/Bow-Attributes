@@ -9,3 +9,5 @@ execute store result score #enchPiercing bowGlobal run data get storage minecraf
 execute store result score #flame bowGlobal run data get storage minecraft:player Player.Inventory[{Slot:-106b}].tag.Enchantments[{id:"minecraft:flame"}].lvl
 
 execute if data storage minecraft:player Player.Inventory[{Slot:-106b,tag:{crit:1b}}] run function bow:entity/arrow/crossbow_crit_off
+
+data modify storage minecraft:effects Effects set from storage minecraft:player Player.Inventory[{Slot:-106b}].tag.effects

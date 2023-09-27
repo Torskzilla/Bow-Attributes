@@ -5,4 +5,6 @@ execute store result entity @s PierceLevel byte 1 run scoreboard players get #ar
 execute if score #customCrits bowGlobal matches 1 store result entity @s crit byte 1 run scoreboard players get #arrowCrit bowGlobal
 execute if score #flame bowGlobal matches 1.. run data modify entity @s Fire set value 2000s
 
+execute if data storage minecraft:effects Effects[0] run data modify entity @s custom_potion_effects set from storage minecraft:effects Effects
+
 function hook:projectile
