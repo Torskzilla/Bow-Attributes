@@ -1,3 +1,5 @@
+data remove storage minecraft:projectile_nbt NBT
+
 execute on origin run data modify storage minecraft:player Player set from entity @s
 
 function bow:entity/all/get_mob

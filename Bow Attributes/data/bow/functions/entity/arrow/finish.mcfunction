@@ -1,10 +1,10 @@
+execute if data storage minecraft:projectile_nbt NBT run data modify entity @s {} merge from storage minecraft:projectile_nbt NBT
+
 scoreboard players operation @s arrowRange = #arrowRange bowGlobal
 execute unless score #arrowForce bowGlobal matches 100 run data modify entity @s Motion set from storage minecraft:arrow Motion
 execute store result entity @s damage double 0.1 run scoreboard players get #arrowDamage bowGlobal
 execute store result entity @s PierceLevel byte 1 run scoreboard players get #arrowPierce bowGlobal
 execute if score #customCrits bowGlobal matches 1 store result entity @s crit byte 1 run scoreboard players get #arrowCrit bowGlobal
 execute if score #flame bowGlobal matches 1.. run data modify entity @s Fire set value 2000s
-
-execute if data storage minecraft:effects Effects[0] run data modify entity @s custom_potion_effects set from storage minecraft:effects Effects
 
 function hook:projectile

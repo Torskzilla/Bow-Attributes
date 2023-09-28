@@ -1,4 +1,7 @@
 data modify entity @s {} merge from storage minecraft:launchmob Mob
+
+execute if data storage minecraft:projectile_nbt NBT run data modify entity @s {} merge from storage minecraft:projectile_nbt NBT
+
 tag @s add launched
 tag @s remove launch_target
 

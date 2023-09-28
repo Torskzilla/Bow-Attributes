@@ -3,6 +3,8 @@ data modify storage arrow Arrow set from entity @s
 scoreboard players set #mulRange bowGlobal 100
 scoreboard players set #mulForce bowGlobal 100
 
+data remove storage minecraft:projectile_nbt NBT
+
 scoreboard players set #mob bowGlobal -1
 execute on origin store result score #mob bowGlobal unless entity @s[type=player]
 execute on origin run data modify storage minecraft:player Player set from entity @s

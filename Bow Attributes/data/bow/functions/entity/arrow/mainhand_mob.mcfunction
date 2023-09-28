@@ -8,4 +8,4 @@ execute store result score #arrowPierce bowGlobal run data get storage minecraft
 execute store result score #enchPiercing bowGlobal run data get storage minecraft:player Player.HandItems[0].tag.Enchantments[{id:"minecraft:piercing"}].lvl
 execute store result score #flame bowGlobal run data get storage minecraft:player Player.HandItems[0].tag.Enchantments[{id:"minecraft:flame"}].lvl
 
-data modify storage minecraft:effects Effects set from storage minecraft:player Player.HandItems[0].tag.effects
+data modify storage minecraft:projectile_nbt NBT set from storage minecraft:player Player.HandItems[0].tag.nbt

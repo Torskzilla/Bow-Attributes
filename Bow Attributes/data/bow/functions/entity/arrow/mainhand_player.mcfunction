@@ -12,4 +12,4 @@ execute store result score #flame bowGlobal run data get storage minecraft:playe
 
 execute if data storage minecraft:player Player.SelectedItem{id:"minecraft:crossbow"} if data storage minecraft:player Player.SelectedItem{tag:{crit:1b}} run function bow:entity/arrow/crossbow_crit_main
 
-data modify storage minecraft:effects Effects set from storage minecraft:player Player.SelectedItem.tag.effects
+data modify storage minecraft:projectile_nbt NBT set from storage minecraft:player Player.SelectedItem.tag.nbt

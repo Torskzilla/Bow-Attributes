@@ -6,6 +6,8 @@ scoreboard players set #crossbowCrit bowGlobal 0
 scoreboard players set #mulRange bowGlobal 100
 scoreboard players set #mulForce bowGlobal 100
 
+data remove storage minecraft:projectile_nbt NBT
+
 execute on origin run function bow:entity/all/origin
 
 execute if score #mob bowGlobal matches 0 on origin run function bow:entity/arrow/get_player
