@@ -26,6 +26,7 @@ execute if score #owner bowGlobal matches 1 run function bow:entity/arrow/owner
 #ammo attributes
 execute store result score #ammoLaunch bowGlobal run data get storage minecraft:arrow Arrow.item.tag.launch
 execute if score #ammoLaunch bowGlobal matches 1.. if data storage minecraft:arrow Arrow.item.tag{overrideLaunch:1b} run scoreboard players operation #arrowLaunch bowGlobal = #ammoLaunch bowGlobal
+execute unless score #arrowLaunch bowGlobal matches 1.. run scoreboard players operation #arrowLaunch bowGlobal = #ammoLaunch bowGlobal
 execute store result score #ammoForce bowGlobal run data get storage minecraft:arrow Arrow.item.tag.force
 scoreboard players operation #arrowForce bowGlobal += #ammoForce bowGlobal
 execute store result score #ammoRange bowGlobal run data get storage minecraft:arrow Arrow.item.tag.range
