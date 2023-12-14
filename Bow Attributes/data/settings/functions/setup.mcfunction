@@ -47,9 +47,6 @@ scoreboard players set #defaultMobThrowForce bowGlobal 100
 #bows crit by releasing right as they're fully charged, crossbows crit by overcharging
 scoreboard players set #customCrits bowGlobal 1
 
-#spectral arrows deal X% extra damage, so spectralDamage 20 makes spectral arrows deal 20% more damage
-scoreboard players set #spectralDamage bowGlobal 0
-
 #Create mob list if it doesnt exist
 execute unless data storage minecraft:launch Mobs run data merge storage minecraft:launch {Mobs:[]}
 

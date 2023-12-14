@@ -7,8 +7,6 @@ execute if score #arrowPierce bowGlobal matches 0 run scoreboard players operati
 execute if score #customCrits bowGlobal matches 1 at @s[scores={bowAiming=18..23}] run function bow:entity/arrow/bow_crit
 execute if score #customCrits bowGlobal matches 1 if score #crossbowCrit bowGlobal matches 1 run function bow:entity/arrow/crossbow_crit
 
-execute if score #spectral bowGlobal matches 1 run scoreboard players operation #mulDamage bowGlobal += #spectralDamage bowGlobal
-
 execute if score #enchPower bowGlobal matches 1.. run scoreboard players add #arrowDamage bowGlobal 5
 scoreboard players operation #arrowDamage bowGlobal += #enchPower bowGlobal
 scoreboard players operation #arrowPierce bowGlobal += #enchPiercing bowGlobal

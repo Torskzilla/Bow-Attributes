@@ -12,6 +12,7 @@ scoreboard players set #mulForce bowGlobal 100
 
 data remove storage minecraft:projectile_nbt NBT
 
+#unused currently
 execute store result score #spectral bowGlobal if entity @s[type=minecraft:spectral_arrow]
 
 execute on origin run function bow:entity/all/origin
