@@ -1,4 +1,10 @@
+data modify storage arrow Arrow set from entity @s
+
+execute store result score #owner bowGlobal if data storage minecraft:arrow Arrow.Owner
+
 scoreboard players set #mob bowGlobal 0
+
+scoreboard players set #notPlayer bowGlobal 1
 
 scoreboard players set #arrowCrit bowGlobal 0
 scoreboard players set #crossbowCrit bowGlobal 0
@@ -15,11 +21,7 @@ data remove storage minecraft:projectile_nbt NBT
 #unused currently
 execute store result score #spectral bowGlobal if entity @s[type=minecraft:spectral_arrow]
 
-execute on origin run function bow:entity/all/origin
-
-#change
-execute if score #mob bowGlobal matches 0 on origin run function bow:entity/arrow/get_player
-execute if score #mob bowGlobal matches 1 run function bow:entity/arrow/get_mob
+execute if score #owner bowGlobal matches 1 run function bow:entity/arrow/owner
 
 #ammo attributes
 execute store result score #ammoLaunch bowGlobal run data get storage minecraft:arrow Arrow.item.tag.launch
@@ -42,9 +44,9 @@ execute store result score #ammoPiercing bowGlobal run data get storage minecraf
 scoreboard players operation #enchPiercing bowGlobal += #ammoPiercing bowGlobal
 
 #player armor attribtues
-execute if score #mob bowGlobal matches 0 on origin run function bow:entity/arrow/stats
+execute if score #owner bowGlobal matches 1 if score #mob bowGlobal matches 0 on origin run function bow:entity/arrow/stats
 
-execute if score #mob bowGlobal matches 1 run function bow:entity/arrow/mob_default
+execute if score #notPlayer bowGlobal matches 1 run function bow:entity/arrow/mob_default
 
 function bow:entity/all/force
 

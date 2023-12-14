@@ -1,3 +1,5 @@
+scoreboard players set #notPlayer bowGlobal 0
+
 execute if score #arrowDamage bowGlobal matches 0 run scoreboard players operation #arrowDamage bowGlobal = #defaultDamage bowGlobal
 execute if score #arrowForce bowGlobal matches 0 run scoreboard players operation #arrowForce bowGlobal = #defaultForce bowGlobal
 execute if score #arrowRange bowGlobal matches 0 run scoreboard players operation #arrowRange bowGlobal = #defaultRange bowGlobal
