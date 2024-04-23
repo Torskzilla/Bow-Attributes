@@ -53,8 +53,7 @@ execute if score #mobType bowGlobal matches 41 summon horse run function bow:ent
 execute if score #mobType bowGlobal matches 42 summon husk run function bow:entity/launch/finish
 execute if score #mobType bowGlobal matches 43 summon illusioner run function bow:entity/launch/finish
 execute if score #mobType bowGlobal matches 44 summon iron_golem run function bow:entity/launch/finish
-#likely broke
-execute if score #mobType bowGlobal matches 45 summon item run function bow:entity/launch/finish
+execute if score #mobType bowGlobal matches 45 run function bow:entity/launch/init_item
 execute if score #mobType bowGlobal matches 46 summon item_frame run function bow:entity/launch/finish
 execute if score #mobType bowGlobal matches 47 summon leash_knot run function bow:entity/launch/finish
 execute if score #mobType bowGlobal matches 48 summon lightning_bolt run function bow:entity/launch/finish
