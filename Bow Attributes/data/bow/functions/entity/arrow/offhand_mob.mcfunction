@@ -6,6 +6,5 @@ execute store result score #arrowForce bowGlobal run data get storage minecraft:
 execute store result score #arrowPierce bowGlobal run data get storage minecraft:player Player.HandItems[1].components."minecraft:custom_data".pierce
 
 execute store result score #enchPiercing bowGlobal run data get storage minecraft:player Player.HandItems[1].components."minecraft:enchantments".levels."minecraft:piercing"
-execute store result score #flame bowGlobal run data get storage minecraft:player Player.HandItems[1].components."minecraft:enchantments".levels."minecraft:flame"
 
 data modify storage minecraft:projectile_nbt NBT set from storage minecraft:player Player.HandItems[1].components."minecraft:custom_data".nbt

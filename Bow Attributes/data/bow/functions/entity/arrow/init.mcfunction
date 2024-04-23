@@ -36,9 +36,11 @@ scoreboard players operation #arrowDamage bowGlobal += #ammoDamage bowGlobal
 execute store result score #ammoPierce bowGlobal run data get storage minecraft:arrow Arrow.item.components."minecraft:custom_data".pierce
 scoreboard players operation #arrowPierce bowGlobal += #ammoPierce bowGlobal
 
+# AMMO NBT FIELD?
+
 #ammo enchants
-execute store result score #ammoFlame bowGlobal run data get storage minecraft:arrow Arrow.item.components."minecraft:enchantments".levels."minecraft:flame"
-scoreboard players operation #flame bowGlobal += #ammoFlame bowGlobal
+execute store result score #flame bowGlobal run data get storage minecraft:arrow Arrow.item.components."minecraft:enchantments".levels."minecraft:flame"
+
 execute store result score #ammoPower bowGlobal run data get storage minecraft:arrow Arrow.item.components."minecraft:enchantments".levels."minecraft:power"
 scoreboard players operation #enchPower bowGlobal += #ammoPower bowGlobal
 execute store result score #ammoPiercing bowGlobal run data get storage minecraft:arrow Arrow.item.components."minecraft:enchantments".levels."minecraft:piercing"
