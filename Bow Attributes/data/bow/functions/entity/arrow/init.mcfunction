@@ -36,6 +36,8 @@ scoreboard players operation #arrowDamage bowGlobal += #ammoDamage bowGlobal
 execute store result score #ammoPierce bowGlobal run data get storage minecraft:arrow Arrow.item.components."minecraft:custom_data".pierce
 scoreboard players operation #arrowPierce bowGlobal += #ammoPierce bowGlobal
 
+data modify storage minecraft:projectile_nbt NBT merge from storage minecraft:arrow Arrow.item.components."minecraft:custom_data".nbt
+
 # AMMO NBT FIELD?
 
 #ammo enchants
