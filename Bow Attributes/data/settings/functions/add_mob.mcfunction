@@ -1,4 +1,4 @@
-data modify storage minecraft:launch Mobs prepend from entity @s SelectedItem.components."minecraft:custom_data".EntityTag
+data modify storage minecraft:launch Mobs prepend from entity @s SelectedItem.components."minecraft:entity_data"
 data modify storage minecraft:type Type.id set from storage minecraft:launch Mobs[0].id
 
 execute if data storage minecraft:type Type{id:"minecraft:area_effect_cloud"} run data modify storage minecraft:launch Mobs[0].MobType set value 0
@@ -119,6 +119,7 @@ execute if data storage minecraft:type Type{id:"minecraft:block_display"} run da
 execute if data storage minecraft:type Type{id:"minecraft:item_display"} run data modify storage minecraft:launch Mobs[0].MobType set value 115
 execute if data storage minecraft:type Type{id:"minecraft:text_display"} run data modify storage minecraft:launch Mobs[0].MobType set value 116
 execute if data storage minecraft:type Type{id:"minecraft:interaction"} run data modify storage minecraft:launch Mobs[0].MobType set value 117
+execute if data storage minecraft:type Type{id:"minecraft:armadillo"} run data modify storage minecraft:launch Mobs[0].MobType set value 118
 
 execute store result storage minecraft:launch Mobs[0].LaunchId int 1 run scoreboard players get #launchId bowGlobal
 tellraw @p [{"text":"Mob added with id ","color":"yellow"},{"score":{"name":"#launchId","objective":"bowGlobal"},"color":"gold"}]

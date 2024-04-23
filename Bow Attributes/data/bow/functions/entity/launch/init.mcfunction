@@ -1,3 +1,5 @@
+# would a macro be better?
+
 data modify storage minecraft:launchmob Mob set value {}
 
 teleport @s ~ ~-128 ~
@@ -51,6 +53,7 @@ execute if score #mobType bowGlobal matches 41 summon horse run function bow:ent
 execute if score #mobType bowGlobal matches 42 summon husk run function bow:entity/launch/finish
 execute if score #mobType bowGlobal matches 43 summon illusioner run function bow:entity/launch/finish
 execute if score #mobType bowGlobal matches 44 summon iron_golem run function bow:entity/launch/finish
+#likely broke
 execute if score #mobType bowGlobal matches 45 summon item run function bow:entity/launch/finish
 execute if score #mobType bowGlobal matches 46 summon item_frame run function bow:entity/launch/finish
 execute if score #mobType bowGlobal matches 47 summon leash_knot run function bow:entity/launch/finish
@@ -124,3 +127,4 @@ execute if score #mobType bowGlobal matches 114 summon block_display run functio
 execute if score #mobType bowGlobal matches 115 summon item_display run function bow:entity/launch/finish
 execute if score #mobType bowGlobal matches 116 summon text_display run function bow:entity/launch/finish
 execute if score #mobType bowGlobal matches 117 summon interaction run function bow:entity/launch/finish
+execute if score #mobType bowGlobal matches 118 summon armadillo run function bow:entity/launch/finish
