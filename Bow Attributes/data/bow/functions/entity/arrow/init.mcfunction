@@ -24,24 +24,28 @@ execute store result score #spectral bowGlobal if entity @s[type=minecraft:spect
 execute if score #owner bowGlobal matches 1 run function bow:entity/arrow/owner
 
 #ammo attributes
-execute store result score #ammoLaunch bowGlobal run data get storage minecraft:arrow Arrow.item.tag.launch
-execute if score #ammoLaunch bowGlobal matches 1.. if data storage minecraft:arrow Arrow.item.tag{overrideLaunch:1b} run scoreboard players operation #arrowLaunch bowGlobal = #ammoLaunch bowGlobal
+execute store result score #ammoLaunch bowGlobal run data get storage minecraft:arrow Arrow.item.components."minecraft:custom_data".launch
+execute if score #ammoLaunch bowGlobal matches 1.. if data storage minecraft:arrow Arrow.item.components."minecraft:custom_data"{overrideLaunch:1b} run scoreboard players operation #arrowLaunch bowGlobal = #ammoLaunch bowGlobal
 execute unless score #arrowLaunch bowGlobal matches 1.. run scoreboard players operation #arrowLaunch bowGlobal = #ammoLaunch bowGlobal
-execute store result score #ammoForce bowGlobal run data get storage minecraft:arrow Arrow.item.tag.force
+execute store result score #ammoForce bowGlobal run data get storage minecraft:arrow Arrow.item.components."minecraft:custom_data".force
 scoreboard players operation #arrowForce bowGlobal += #ammoForce bowGlobal
-execute store result score #ammoRange bowGlobal run data get storage minecraft:arrow Arrow.item.tag.range
+execute store result score #ammoRange bowGlobal run data get storage minecraft:arrow Arrow.item.components."minecraft:custom_data".range
 scoreboard players operation #arrowRange bowGlobal += #ammoRange bowGlobal
-execute store result score #ammoDamage bowGlobal run data get storage minecraft:arrow Arrow.item.tag.rangedDamage
+execute store result score #ammoDamage bowGlobal run data get storage minecraft:arrow Arrow.item.components."minecraft:custom_data".rangedDamage
 scoreboard players operation #arrowDamage bowGlobal += #ammoDamage bowGlobal
-execute store result score #ammoPierce bowGlobal run data get storage minecraft:arrow Arrow.item.tag.pierce
+execute store result score #ammoPierce bowGlobal run data get storage minecraft:arrow Arrow.item.components."minecraft:custom_data".pierce
 scoreboard players operation #arrowPierce bowGlobal += #ammoPierce bowGlobal
 
+data modify storage minecraft:projectile_nbt NBT merge from storage minecraft:arrow Arrow.item.components."minecraft:custom_data".nbt
+
+# AMMO NBT FIELD?
+
 #ammo enchants
-execute store result score #ammoFlame bowGlobal run data get storage minecraft:arrow Arrow.item.tag.Enchantments[{id:"minecraft:flame"}].lvl
-scoreboard players operation #flame bowGlobal += #ammoFlame bowGlobal
-execute store result score #ammoPower bowGlobal run data get storage minecraft:arrow Arrow.item.tag.Enchantments[{id:"minecraft:power"}].lvl
+execute store result score #flame bowGlobal run data get storage minecraft:arrow Arrow.item.components."minecraft:enchantments".levels."minecraft:flame"
+
+execute store result score #ammoPower bowGlobal run data get storage minecraft:arrow Arrow.item.components."minecraft:enchantments".levels."minecraft:power"
 scoreboard players operation #enchPower bowGlobal += #ammoPower bowGlobal
-execute store result score #ammoPiercing bowGlobal run data get storage minecraft:arrow Arrow.item.tag.Enchantments[{id:"minecraft:piercing"}].lvl
+execute store result score #ammoPiercing bowGlobal run data get storage minecraft:arrow Arrow.item.components."minecraft:enchantments".levels."minecraft:piercing"
 scoreboard players operation #enchPiercing bowGlobal += #ammoPiercing bowGlobal
 
 #player armor attribtues
