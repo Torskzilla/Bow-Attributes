@@ -1,4 +1,4 @@
-data modify storage minecraft:launch Mobs prepend from entity @s SelectedItem.tag.EntityTag
+data modify storage minecraft:launch Mobs prepend from entity @s SelectedItem.components."minecraft:custom_data".EntityTag
 data modify storage minecraft:type Type.id set from storage minecraft:launch Mobs[0].id
 
 execute if data storage minecraft:type Type{id:"minecraft:area_effect_cloud"} run data modify storage minecraft:launch Mobs[0].MobType set value 0

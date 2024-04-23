@@ -7,10 +7,10 @@ execute on origin store result score #mob bowGlobal unless entity @s[type=player
 execute on origin run data modify storage minecraft:player Player set from entity @s
 
 #change
-execute store result score #arrowLaunch bowGlobal run data get storage minecraft:arrow Arrow.item.tag.launch
-execute store result score #arrowForce bowGlobal run data get storage minecraft:arrow Arrow.item.tag.force
-execute store result score #arrowRange bowGlobal run data get storage minecraft:arrow Arrow.item.tag.range
-data modify storage minecraft:projectile_nbt NBT set from storage minecraft:arrow Arrow.item.tag.nbt
+execute store result score #arrowLaunch bowGlobal run data get storage minecraft:arrow Arrow.item.components."minecraft:custom_data".launch
+execute store result score #arrowForce bowGlobal run data get storage minecraft:arrow Arrow.item.components."minecraft:custom_data".force
+execute store result score #arrowRange bowGlobal run data get storage minecraft:arrow Arrow.item.components."minecraft:custom_data".range
+data modify storage minecraft:projectile_nbt NBT set from storage minecraft:arrow Arrow.item.components."minecraft:custom_data".nbt
 
 execute if score #mob bowGlobal matches 0 run function bow:entity/trident/stats
 

@@ -8,7 +8,7 @@ execute unless score #off bowGlobal matches 1 run function bow:entity/all/mainha
 execute if score #off bowGlobal matches 1 run function bow:entity/all/offhand_mob
 
 #Bow launch
-execute store result score #arrowLaunch bowGlobal run data get storage minecraft:player Player.HandItems[0].tag.launch
+execute store result score #arrowLaunch bowGlobal run data get storage minecraft:player Player.HandItems[0].components."minecraft:custom_data".launch
 
 #power is accounted for later
 scoreboard players set #enchPower bowGlobal 0
