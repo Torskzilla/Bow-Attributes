@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+	"minecraft:arrow",
+	"minecraft:trident",
 	"minecraft:egg",
 	"minecraft:experience_bottle",
 	"minecraft:eye_of_ender",
