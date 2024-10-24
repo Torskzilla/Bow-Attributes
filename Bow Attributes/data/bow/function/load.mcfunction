@@ -1,5 +1,5 @@
 scoreboard objectives add bowGlobal dummy
 
 #Run setup, increase the setup score each version so setup will run again if you update
-execute unless score #setup bowGlobal matches 7 run function settings:setup
-scoreboard players set #setup bowGlobal 7
+execute unless score #setup bowGlobal matches 8 run function settings:setup
+scoreboard players set #setup bowGlobal 8
