@@ -1,3 +1,5 @@
+function bow:entity/all/default_scores
+
 data modify storage arrow Arrow set from entity @s
 
 execute store result score #owner bowGlobal if data storage minecraft:arrow Arrow.Owner

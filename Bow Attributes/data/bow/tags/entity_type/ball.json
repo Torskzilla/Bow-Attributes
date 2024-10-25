@@ -4,6 +4,8 @@
 	"minecraft:wither_skull",
 	"minecraft:dragon_fireball",
 	"minecraft:small_fireball",
-	"minecraft:fireball"
+	"minecraft:fireball",
+	"minecraft:wind_charge",
+	"minecraft:breeze_wind_charge"
   ]
 }
