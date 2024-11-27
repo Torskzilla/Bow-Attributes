@@ -11,6 +11,8 @@
 	"minecraft:snowball",
 	"minecraft:wither_skull",
 	"minecraft:falling_block",
-	"minecraft:item"
+	"minecraft:item",
+	"minecraft:wind_charge",
+	"minecraft:breeze_wind_charge"
   ]
 }

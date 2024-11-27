@@ -1,2 +1,2 @@
 data modify storage minecraft:arrow Motion set from storage minecraft:arrow Arrow.Motion
-function bow:entity/all/calculate_force
+execute unless score #arrowForce bowGlobal matches 100 run function bow:entity/all/calculate_force
