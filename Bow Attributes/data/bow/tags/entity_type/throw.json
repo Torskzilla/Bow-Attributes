@@ -5,7 +5,8 @@
 	"minecraft:experience_bottle",
 	"minecraft:eye_of_ender",
 	"minecraft:ender_pearl",
-	"minecraft:potion",
+	"minecraft:lingering_potion",
+	"minecraft:splash_potion",
 	"minecraft:snowball"
   ]
 }
